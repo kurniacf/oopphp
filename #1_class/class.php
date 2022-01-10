@@ -1,6 +1,6 @@
 <?php
 
-class Movie
+class Movie1
 {
     public $name = "Spiderman No Way Home";
     public $actor = "Tom Holland";
@@ -11,14 +11,14 @@ class Movie
     }
 }
 
-$streaming = new Movie();
+$streaming = new Movie1();
 echo "The Class is " . get_class($streaming) . "<br>";
 
 echo $streaming->name . "<br>";
 echo $streaming->actor . "<br>";
 echo $streaming->addMovie() . "<br> <br>";
 
-$streaming1 = new Movie();
+$streaming1 = new Movie1();
 $streaming1->name = "The King's Man";
 $streaming1->actor = "Rhys Ifans";
 
