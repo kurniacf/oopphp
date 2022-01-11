@@ -39,17 +39,17 @@ class ReviewerMovie extends Movie
     public function __construct($name, $actor, $rating)
     {
         parent::__construct($name, $actor);
-        $this->actor = $actor;
+        $this->rating = $rating;
     }
 }
 
 $streaming1 = new Movie("Venom", "Tom Hardy");
 $streaming2 = new Movie("Loki", "Tom Hiddleston");
-$streaming3 = new Movie("Squid Game", "HoYeon Jung", 9.30);
+$streaming3 = new ReviewerMovie("Squid Game", "HoYeon Jung", 9.35);
 
 
 echo $streaming3->name . "<br>";
-echo $streaming3->actor . "<br>";
+echo $streaming3->rating . "<br>";
 echo $streaming3->getActor() . "<br>";
 
 ?>
