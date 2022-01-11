@@ -1,9 +1,12 @@
 <?php
 
+use ReviewerMovie as GlobalReviewerMovie;
+
 class Movie
 {
     public $name;
-    public $actor;
+    private $actor;
+    public $subscription = "free";
 
     public function __construct($name, $actor)
     {
@@ -14,6 +17,11 @@ class Movie
     public function addMovie()
     {
         return "$this->name Added a New Movie List";
+    }
+
+    public function message()
+    {
+        return "Follow Instagram of $this->actor";
     }
 
     // Getter
@@ -35,11 +43,17 @@ class Movie
 class ReviewerMovie extends Movie
 {
     public $rating;
+    public $subscription = "Pro";
 
     public function __construct($name, $actor, $rating)
     {
         parent::__construct($name, $actor);
         $this->rating = $rating;
+    }
+
+    public function message()
+    {
+        return "Get Free Photo from $this->actor";
     }
 }
 
@@ -61,7 +75,7 @@ echo $streaming3->getActor() . "<br>";
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inheritance</title>
+    <title>Class Tutorial</title>
 </head>
 
 <body>
